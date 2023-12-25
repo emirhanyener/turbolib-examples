@@ -1,0 +1,48 @@
+{
+    "images": [
+      {
+        "src": "images/Apple.png",
+        "name": "Apple"
+      },
+      {
+        "src": "images/bg.png",
+        "name": "Background"
+      },
+      {
+        "src": "images/bow1.png",
+        "name": "Bow1"
+      },
+      {
+        "src": "images/bow2.png",
+        "name": "Bow2"
+      },
+      {
+        "src": "images/bow3.png",
+        "name": "Bow3"
+      },
+      {
+        "src": "images/bow4.png",
+        "name": "Bow4"
+      },
+      {
+        "src": "images/bow5.png",
+        "name": "Bow5"
+      },
+      {
+        "src": "images/bow6.png",
+        "name": "Bow6"
+      },
+      {
+        "src": "images/bow7.png",
+        "name": "Bow7"
+      },
+      {
+        "src": "images/arrow.png",
+        "name": "Arrow"
+      }
+    ],
+    "animations": [
+        
+    ]
+  }
+  
