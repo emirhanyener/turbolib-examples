@@ -15,7 +15,7 @@ import {
   Function,
   KeyManager,
   Scene,
-} from "../src/index.js";
+} from "../turbolib/src/index.js";
 
 class Arrow extends GameObject {
   constructor() {
