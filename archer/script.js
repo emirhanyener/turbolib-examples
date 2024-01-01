@@ -18,7 +18,7 @@ import {
   Scene,
 } from "../turbolib/src/index.js";
 
-config.images_path = "https://emirhanyener.github.io/turbolib-examples/archer/images/";
+config.path = "archer/";
 config.canvas.background = "Background";
 config.canvas.width = window.innerWidth;
 config.canvas.height = window.innerHeight;
