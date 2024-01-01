@@ -39,6 +39,10 @@
       {
         "src": "images/arrow.png",
         "name": "Arrow"
+      },
+      {
+        "src": "images/dot.png",
+        "name": "Dot"
       }
     ],
     "animations": [

@@ -68,6 +68,8 @@ setTimeout(() => {
       this.delay = delay;
       this.clickDelay = true;
       this._arrow;
+      this.dots = []
+      this.dotStep = 6;
 
       //Create arrow instance and object pool
       this.arrowPool = new ArrowObjectPool(arrowCount, new Arrow());
@@ -76,6 +78,13 @@ setTimeout(() => {
       this.bowGameObject = GameObject.create("BowObject", x, y, 150, 150);
       this.bowGameObject.isInteractive = false;
       this.bowGameObject.setImage("Bow1");
+      
+      for (let dot_count = 0; dot_count < 30; dot_count++) {
+        const dot = GameObject.create("Dot", x, y, 10, 10);
+        dot.setImage("Dot");
+        dot.isInteractive = false;
+        this.dots.push(dot);
+      }
     }
 
     getPosition() {
@@ -84,12 +93,20 @@ setTimeout(() => {
     setAngle(angle) {
       this.angle = angle;
       this.bowGameObject.rotationZ = angle * (180 / Math.PI);
+      this.updateDots();
     }
     setPower(power) {
       this.power = power;
       this.bowGameObject.setImage(
         "Bow" + Math.min(Math.floor(power / 100) + 1, 7)
       );
+      this.updateDots();
+    }
+
+    updateDots(){
+      for (let t = 1; t < this.dots.length + 1; t++) {
+        this.dots[t - 1].position.update(this.bowGameObject.position.x + (Math.cos(this.angle) * (this.power / 25) * (t * this.dotStep)), this.bowGameObject.position.y + ((Math.sin(this.angle) * (this.power / 25) * (t * this.dotStep)) + ((0.0981 * (t * this.dotStep) * (t * this.dotStep)) / 2)));
+      }
     }
 
     release() {
