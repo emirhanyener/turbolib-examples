@@ -81,10 +81,18 @@ setTimeout(() => {
     if (GameObject.find("Rocket").position.y > 100) {
       resetGame();
     }
-    if (GameObject.find("Rocket").checkTrigger(0, 0, 0, 110).length > 0) {
+    if (
+      GameObject.find("Rocket").checkTrigger(
+        0,
+        90,
+        0,
+        10 + GameObject.find("Rocket").getPhysics().velocity.y
+      ).length > 0
+    ) {
       if (
         GameObject.find("Rocket").getPhysics().velocity.y > 3 ||
-        GameObject.find("Rocket").rotationZ < -5 || GameObject.find("Rocket").rotationZ > 5
+        GameObject.find("Rocket").rotationZ < -5 ||
+        GameObject.find("Rocket").rotationZ > 5
       ) {
         resetGame();
       } else {
@@ -144,6 +152,7 @@ setTimeout(() => {
 
   function resetGame() {
     loadScene(new GameScene());
+    wind = getRandomFloat(-2, 2);
     winpanelDiv.style.opacity = 0;
   }
 
