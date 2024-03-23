@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocket Landing</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div id="win_panel">YOU WIN</div>
+    <div id="parameters">
+      <table>
+        <tr>
+          <td>Rocket Angle</td>
+          <td id="angle">0</td>
+        </tr>
+        <tr>
+          <td>Velocity X</td>
+          <td id="velocity_x">0</td>
+        </tr>
+        <tr>
+          <td>Velocity Y</td>
+          <td id="velocity_y">0</td>
+        </tr>
+        <tr>
+          <td>Altitude</td>
+          <td id="rocket_altitude">0</td>
+        </tr>
+        <tr>
+          <td>Wind</td>
+          <td id="wind">0</td>
+        </tr>
+      </table>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div id="altitude">
+      <div id="altitudeContent">
+        <img src="rocket.png" alt="" id="rocketimg" style="bottom: 100px" />
+        <img src="ship.png" alt="" id="shipimg" />
+      </div>
+    </div>
+    <script type="module" src="game.js"></script>
+  </body>
+</html>

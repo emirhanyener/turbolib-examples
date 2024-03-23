@@ -1,0 +1,13 @@
+{
+  "images": [
+    {
+      "src": "ship.png",
+      "name": "Ship"
+    },
+    {
+      "src": "rocket.png",
+      "name": "Rocket"
+    }
+  ],
+  "animations": []
+}
